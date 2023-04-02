@@ -28,7 +28,7 @@
             </div>
 
                 <div class="bg-light py-4">
-                    <div class="container product_data mt-3">
+                    <div class="container mt-3" id="product_data">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="shadow">
@@ -55,15 +55,15 @@
                                             <label for="Quantity">Quantity</label>
                                             <div class="input-group mb-3" style="width: 130px;">
                                                 <button class="input-group-text  decrement-btn">-</button>
-                                                <input type="text" class="form-control text-center input-qty bg-white" value="1" disabled>
-                                                <button class="input-group-text increment-btn">+</button>
+                                                <input type="text" class="form-control text-center bg-white" id="input-qty" value="1" disabled>
+                                                <button class="input-group-text" id="increment-btn">+</button>
                                             </div>
                                         </div>
                                     </div> 
 
                                     <div class="row mt-3">
                                         <div class="col-md-6">
-                                            <button class="btn btn-primary px-4 addToCartBtn" value="<?= $product['id'] ?>"><i class="fa fa-shopping-cart me-2">Add to cart</i></button>
+                                            <button class="btn btn-primary px-4" id="addToCartBtn" value="<?= $product['id'] ?>"><i class="fa fa-shopping-cart me-2">Add to cart</i></button>
                                         </div>
                                     </div>
 
@@ -88,8 +88,6 @@
     include('includes/footer.php');
 
     ?>   
-        <script>
         
-        </script>
     <?php
 ?> 
