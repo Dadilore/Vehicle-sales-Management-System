@@ -6,10 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cartrade</title>
 
-    <link rel="stylesheet" href="assets/CSS/bootstrap5.min.css">
-    <link rel="stylesheet" href="assets/CSS/custom.css">
+    <link rel="stylesheet" href="assets/css/bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+		<link rel="shortcut icon" href="assets/images/logo/favicon.png" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

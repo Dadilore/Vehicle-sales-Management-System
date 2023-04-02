@@ -12,20 +12,19 @@
 
         if($product)
         {
-            ?> 
-            <div class="py-3 bg-danger">
-                        <div class="container">
-                            <h6 class="text-white">
-                                <a class="text-white" href="index.php">
-                                    Home/
-                                </a>
-                                <a class="text-white" href="categories.php">
-                                    Available Car Collections/
-                                </a>
-                                <?= $product['name']; ?>
-                            </h6>
-                        </div>
+            ?> <div class="py-3 bg-primary">
+            <div class="container">
+                <a class="text-white fs-7 fw-regular m-0" href="index.php">
+                    Home
+                </a>
+                <span class="h-20px border-white border-start mx-2"></span>
+                <a class="text-white fs-7 fw-regular m-0" href="categories.php">
+                    Collections
+                </a>
+                <span class="h-20px border-white border-start mx-2"></span>                            
+                <a class="text-secondary fs-7 fw-regular m-0"><?= $product['name']; ?></a>
             </div>
+        </div>
 
                 <div class="bg-light py-4">
                     <div class="container mt-3" id="product_data">
@@ -36,40 +35,44 @@
                                 </div>
                             </div>
                             <div class="col-md-8">
+                                <?php if($product['trending']);{?>
+                                    <span class="badge badge-light-secondary mb-2">Trending</span>
+                                <?php } ?>
+                                
                                 <h4 class="fw-bold"><?= $product['name']; ?>
-                                <span class="float-end text-danger"><?php if($product['trending']);{echo "Trending"; } ?> </span>
+                                <span class="float-end text-danger"> </span>
                                 </h4>
-                                <hr>
-                                <h6><?= $product['small_description'] ?></h6>
+                                <hr class="my-2">
+                                <p class="text-muted fs-7"><?= $product['small_description'] ?></p>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h4>Ksh <span class="text-success fw-bold"> <?= $product['selling_price'] ?></span></h4>
+                                        <h4>KES <span class="text-primary fw-bold"> <?= $product['selling_price'] ?></span><s class="text-danger fs-6 ms-2 opacity-50"><?= $product['original_price'] ?></s></h4>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="Quantity">Quantity</label>
+                                                <div class="input-group mb-3" style="width: 130px;">
+                                                    <button class="input-group-text  decrement-btn">-</button>
+                                                    <input type="text" class="form-control text-center bg-white" id="input-qty" value="1" disabled>
+                                                    <button class="input-group-text" id="increment-btn">+</button>
+                                                </div>
+                                            </div>
+                                        </div> 
                                     </div>
                                     <div class="col-md-6">
-                                        <h5>Ksh <s class="text-danger"><?= $product['original_price'] ?></s></h5>
-                                     </div>                            
+                                        <button class="btn btn-secondary px-4" id="addToCartBtn" value="<?= $product['id'] ?>"><i class="fa fa-shopping-cart me-2"></i>Add to Cart</button> 
+                                    </div>                            
                                 </div>
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="Quantity">Quantity</label>
-                                            <div class="input-group mb-3" style="width: 130px;">
-                                                <button class="input-group-text  decrement-btn">-</button>
-                                                <input type="text" class="form-control text-center bg-white" id="input-qty" value="1" disabled>
-                                                <button class="input-group-text" id="increment-btn">+</button>
-                                            </div>
-                                        </div>
-                                    </div> 
-
-                                    <div class="row mt-3">
-                                        <div class="col-md-6">
-                                            <button class="btn btn-primary px-4" id="addToCartBtn" value="<?= $product['id'] ?>"><i class="fa fa-shopping-cart me-2">Add to cart</i></button>
-                                        </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <div class="card border-0 shadow">
+                                    <div class="card-body px-10 py-10">
+                                        <h6>Vehice Description</h6>
+                                        <p class="m-0"><?= $product['description'] ?></p>
                                     </div>
-
-                                <hr>
-                                <h6>Vehice Description</h6>
-                                <p><?= $product['description'] ?></p>
+                                </div>
                             </div>
                         </div>
                     </div>
