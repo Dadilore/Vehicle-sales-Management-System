@@ -52,7 +52,7 @@
                                             <div class="col-md-4">
                                                 <label for="Quantity">Quantity</label>
                                                 <div class="input-group mb-3" style="width: 130px;">
-                                                    <button class="input-group-text  decrement-btn">-</button>
+                                                    <button class="input-group-text"  id="decrement-btn">-</button>
                                                     <input type="text" class="form-control text-center bg-white" id="input-qty" value="1" disabled>
                                                     <button class="input-group-text" id="increment-btn">+</button>
                                                 </div>
