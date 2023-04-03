@@ -1,3 +1,5 @@
+
+</div>
 <div class="footer py-4 d-flex flex-lg-column ">
 	<div class=" container  d-flex flex-column flex-md-row align-items-center justify-content-between">
 		<div class="text-dark order-2 order-md-1">
