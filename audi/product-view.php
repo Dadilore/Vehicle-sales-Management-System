@@ -26,7 +26,7 @@
             </div>
         </div>
 
-                <div class="bg-light py-4">
+                <div class="bg-light py-4 mt-5">
                     <div class="container mt-3" id="product_data">
                         <div class="row">
                             <div class="col-md-4">
