@@ -6,7 +6,7 @@ include('functions/myfunctions.php');
 
 ?>
 
-<div class="py-3 bg-primary">
+<div class="py-3 bg-primary mt-4">
     <div class="container">
         <a class="text-white fs-7 fw-regular m-0" href="index.php">
             Home

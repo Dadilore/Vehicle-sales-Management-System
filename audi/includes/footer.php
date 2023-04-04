@@ -81,9 +81,25 @@
         })
 
         $(document).on('click','.updateQty', function (){
-            alert("hello");
+
+            var qty = $(this).closest('#product_data').find('#input-qty').val();
+            var prod_id = $(this).closest('#product_data').find('.product_name').val();
+
+            $.ajax({
+                method: "POST",
+                url: "functions/handlecart.php",
+                data:{
+                    "prod_id": prod_id,
+                    "prod_qty": qty,
+                    "scope": "update"
+                },
+                success: function(response)
+                {
+                    //alert(response);
+                }
+            });    
         });
-}) 
+});
  </script>
 
 

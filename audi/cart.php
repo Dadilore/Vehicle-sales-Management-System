@@ -42,6 +42,7 @@ include('functions/myfunctions.php');
                                         <h5>Ksh <?= $citem['selling_price'];?> </h5>
                                         </div>
                                         <div class="col-md-2">
+                                            <input type="hidden" class="product_name" value="<?= $citem['prod_id']; ?>">
                                             <div class="input-group mb-3" style="width: 130px;">
                                                 <button class="input-group-text updateQty"  id="decrement-btn">-</button>
                                                 <input type="text" class="form-control text-center bg-white" id="input-qty" value=" <?= $citem['prod_qty'];?>" disabled>
@@ -62,6 +63,7 @@ include('functions/myfunctions.php');
         </div>
     </div>
 </div>
+
 
 <?php 
 include('includes/footer.php');
