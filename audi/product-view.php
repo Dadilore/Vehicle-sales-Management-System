@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    include('functions/myfunctions.php');
     include('includes/header.php');
     include('includes/navbar.php');
-    include('functions/myfunctions.php');
+    
 
     if (isset($_GET['product'])) 
     {
@@ -26,8 +26,8 @@
             </div>
         </div>
 
-                <div class="bg-light py-4 mt-5">
-                    <div class="container mt-3" id="product_data">
+                <div class="bg-light py-4">
+                    <div class="container mt-3 product_data">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="shadow">
@@ -52,15 +52,15 @@
                                             <div class="col-md-4">
                                                 <label for="Quantity">Quantity</label>
                                                 <div class="input-group mb-3" style="width: 130px;">
-                                                    <button class="input-group-text"  id="decrement-btn">-</button>
-                                                    <input type="text" class="form-control text-center bg-white" id="input-qty" value="1" disabled>
-                                                    <button class="input-group-text" id="increment-btn">+</button>
+                                                    <button class="input-group-text decrement-btn">-</button>
+                                                    <input type="text" class="form-control text-center bg-white input-qty" value="1" disabled>
+                                                    <button class="input-group-text increment-btn">+</button>
                                                 </div>
                                             </div>
                                         </div> 
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="btn btn-secondary px-4" id="addToCartBtn" value="<?= $product['id'] ?>"><i class="fa fa-shopping-cart me-2"></i>Add to Cart</button> 
+                                        <button class="btn btn-secondary px-4 addToCartBtn" value="<?= $product['id'] ?>"><i class="fa fa-shopping-cart me-2"></i>Add to Cart</button> 
                                     </div>                            
                                 </div>
                             </div>

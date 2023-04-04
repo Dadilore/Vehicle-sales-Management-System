@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    include('functions/myfunctions.php');
     include('includes/header.php');
     include('includes/navbar.php');
-    include('functions/myfunctions.php');
+    
 
     if (isset($_GET['category'])) 
     {
@@ -49,36 +49,32 @@
                                     
                             <div class="row my-4">
                                 <?php
-                                    $products = getProdByCategory($cid);
+                                $products = getProdByCategory($cid);
 
-                                    if (mysqli_num_rows($products) > 0) 
-                                    {
-                                                foreach ($products as $item) 
-                                                {
-                                                    ?>
-                                                        <div class="col-md-3 mb-2">
-                                                            <a href="product-view.php?product=<?= $item['slug']; ?>">
-                                                                <div class="card shadow product-box">
-                                                                    <div class="card-body product">
-                                                                        <img src="uploads/<?= $item['image']; ?>" alt="Product Image" class="product-thumbnail">
-                                                                        <h4 class="text-center name"><?= $item['name']; ?></h4>
-                                                                        <p class="text-muted">KES <?= $item['selling_price']; ?></p>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    <?php
-                                                }
-                                    } else 
-                                    {
-                                        ?>
-                                                <div class="alert bg-light-secondary d-flex flex-column flex-sm-row p-4">
-                                                    <div class="d-flex flex-column text-dark pe-0 pe-sm-10">
-                                                        <span>Oops...no products here yet. You can check back later</span>                                                    
+                                if (mysqli_num_rows($products) > 0) {
+                                    foreach ($products as $item) {
+                                ?>
+                                        <div class="col-md-3 mb-2">
+                                            <a href="product-view.php?product=<?= $item['slug']; ?>">
+                                                <div class="card shadow product-box">
+                                                    <div class="card-body product">
+                                                        <img src="uploads/<?= $item['image']; ?>" alt="Product Image" class="product-thumbnail">
+                                                        <h4 class="text-center name"><?= $item['name']; ?></h4>
+                                                        <p class="text-muted">KES <?= $item['selling_price']; ?></p>
                                                     </div>
                                                 </div>
-                                            <?php 
-                                        }
+                                            </a>
+                                        </div>
+                                <?php
+                                    }
+                                } else {?>
+                                    
+                                    <div class="alert bg-light-secondary d-flex flex-column flex-sm-row p-4">
+                                        <div class="d-flex flex-column text-dark pe-0 pe-sm-10">
+                                            <span>Oops...no products here yet. You can check back later</span>                                                    
+                                        </div>
+                                    </div>
+                                    <?php }
                                 ?>
                             </div>
                                

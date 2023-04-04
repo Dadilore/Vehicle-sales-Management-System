@@ -10,9 +10,6 @@ include('functions/myfunctions.php');
     <div class="row">
 
         <div class="col-md-12">
-            <a href="products.php">
-            <div class="btn btn-primary float-end">BACK</div>
-            </a>
                 <?php 
                     if(isset($_GET['id']))
                     {
