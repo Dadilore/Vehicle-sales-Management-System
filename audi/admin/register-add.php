@@ -2,7 +2,8 @@
 include('../config/dbcon.php');
 include('authentication.php');
 include('includes/header.php');
-
+include('includes/sidebar.php');
+include('includes/navbar-top.php');
 ?>
 
 <div class="container-fluid px-4">

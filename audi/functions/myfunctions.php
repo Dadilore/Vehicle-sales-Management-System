@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include('config/dbcon.php');
 
@@ -39,11 +40,20 @@ function getIDActive($table, $id)
 function getCartItems()
 {
     global $con;
-
-    $userid = $_SESSION['auth_user']['user_id'];
+    $userId = $_SESSION['auth_user']['user_id'];
     $query = "SELECT c.id as cid, c.prod_id, c.prod_qty, p.id as pid, p.name, p.image, p.selling_price 
-                FROM carts c, products p WHERE c.prod_id=p.id AND c.user_id='$userid' ORDER BY c.id DESC ";
+                FROM carts c, products p WHERE c.prod_id=p.id AND c.user_id='$userId' ORDER BY c.id DESC ";
     return $query_run = mysqli_query($con, $query);
+}
+
+function getOrders()
+{
+    global $con;
+    $userId = $_SESSION['auth_user']['user_id'];
+
+    $query = "SELECT * FROM orders WHERE user_id ='$userId' "; 
+    return $query_run = mysqli_query($con, $query);
+
 }
 
 

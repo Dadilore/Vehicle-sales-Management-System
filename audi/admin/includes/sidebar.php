@@ -13,6 +13,23 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Registered users
                             </a>
+                            
+                            <!-- <a class="nav-link" href="add-cartegory.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Add brand
+                            </a>
+                            <a class="nav-link" href="cartegory.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                View brand
+                            </a>
+                            <a class="nav-link" href="add-product.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Add vehice
+                            </a>
+                            <a class="nav-link" href="products.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                View Vehicle
+                            </a> -->
 
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -32,11 +49,16 @@
                             
                             <div class="sb-sidenav-menu-heading">Addons</div>
                            
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="orders.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                Orders
                             </a>
                         </div>
+                    </div>
+                    <div>
+                        <!-- <form action="logoutcode.php" method="POST">
+                            <button type="submit" name="logout_btn" class="dropdown-item btn-danger">Logout</button>
+                        </form> -->
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">ADMIN</div>

@@ -2,7 +2,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div class="text-muted">Copyright &copy; cartrade 2023</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -15,9 +15,8 @@
                 
 
                 <script src="js/jquery-3.6.4.min.js"></script>
-                
-                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
                 <script src="js/custom.js"></script>
+                <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+                
             </div>
         </div>

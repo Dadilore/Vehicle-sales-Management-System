@@ -70,7 +70,7 @@ if(isset($_SESSION['auth']))
 
                 break;
 
-                case "delete";
+                case "delete":
                 $cart_id = $_POST['cart_id'];
 
                 $user_id = $_SESSION['auth_user']['user_id'];
@@ -80,7 +80,7 @@ if(isset($_SESSION['auth']))
 
                 if(mysqli_num_rows($chk_existing_cart_run) > 0)
                 {
-                    $delete_query = "DELETE FROM carts WHERE cart_id='$cart_id' ";
+                    $delete_query = "DELETE FROM carts WHERE id='$cart_id' ";
                     $delete_query_run = mysqli_query($con, $delete_query);
                     if($delete_query_run)
                     {

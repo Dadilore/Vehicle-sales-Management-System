@@ -27,6 +27,8 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <li>
+            <li><a class="dropdown-item" href="my-orders.php">Orders</a></li>
+            <li>
           <form action="allcode.php" method="POST">
              <button name= logout_btn type = "submit"class="dropdown-item">Logout</button>
           </form>

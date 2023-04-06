@@ -13,7 +13,9 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-   
+    <link rel="shortcut icon" href="../assets/images/logo/favicon.png" />
+    <!-- <link href="css/landing.css" rel="stylesheet" /> -->
+
     <style>
         .form-control {
             border: 1px solid black !important;

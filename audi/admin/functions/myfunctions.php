@@ -14,5 +14,12 @@ function getByID($table, $id)
     $query = "SELECT * FROM $table WHERE id='$id' ";
     return $query_run = mysqli_query($con, $query);
 }
+function getAllOrders()
+{
+    global $con;
+    $query = "SELECT * FROM orders WHERE status = '0' ";
+    return $query_run = mysqli_query($con, $query);
+}
+
 
 ?>
